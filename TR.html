@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theodore Roosevelt 2025 - Bull Moose Returns</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(20, 40, 20, 0.7), rgba(40, 20, 10, 0.8)),
+                url('https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=1600') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #f4f1e8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 0, 0, 0.03) 2px,
+                    rgba(0, 0, 0, 0.03) 4px);
+            pointer-events: none;
+        }
+
+        .bull-moose-badge {
+            width: 120px;
+            height: 120px;
+            background: #8B4513;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+            border: 5px solid #DAA520;
+            font-size: 48px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .bull-moose-badge:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.8rem;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #DAA520;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: #8B4513;
+            color: #f4f1e8;
+            border: 3px solid #DAA520;
+        }
+
+        .btn-primary:hover {
+            background: #DAA520;
+            color: #2c2c2c;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #f4f1e8;
+            border: 3px solid #f4f1e8;
+        }
+
+        .btn-secondary:hover {
+            background: #f4f1e8;
+            color: #2c2c2c;
+            transform: translateY(-3px);
+        }
+
+        /* Why TR Section */
+        .why-tr {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #2d5016 0%, #1a3d0a 100%);
+            color: #f4f1e8;
+            text-align: center;
+        }
+
+        .why-tr h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .why-tr .intro {
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .platform-item {
+            background: rgba(244, 241, 232, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #DAA520;
+            transition: all 0.3s;
+        }
+
+        .platform-item:hover {
+            transform: translateY(-10px);
+            background: rgba(244, 241, 232, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .platform-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #DAA520;
+        }
+
+        .platform-arrow {
+            font-size: 2rem;
+            margin: 10px 0;
+            color: #DAA520;
+        }
+
+        /* Square Deal Section */
+        .square-deal {
+            padding: 100px 20px;
+            background: #f4f1e8;
+        }
+
+        .square-deal h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            color: #2d5016;
+        }
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pillar-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            border-top: 5px solid #8B4513;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .pillar-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .pillar-card h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #2d5016;
+        }
+
+        .pillar-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Bully Section */
+        .bully-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+            color: #f4f1e8;
+            text-align: center;
+        }
+
+        .bully-section h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .quote-box {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            padding: 40px;
+            background: rgba(244, 241, 232, 0.1);
+            border-left: 5px solid #DAA520;
+            border-radius: 10px;
+            font-size: 1.4rem;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            padding: 30px;
+            background: rgba(244, 241, 232, 0.1);
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #DAA520;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 100px 20px;
+            background: #2d5016;
+            color: #f4f1e8;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .signup-form {
+            max-width: 500px;
+            margin: 0 auto 40px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .signup-form input {
+            flex: 1;
+            padding: 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .signup-form button {
+            padding: 15px 30px;
+            font-size: 1rem;
+            background: #DAA520;
+            color: #2c2c2c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .signup-form button:hover {
+            background: #f4f1e8;
+            transform: scale(1.05);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .social-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #8B4513;
+            border: 3px solid #DAA520;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .social-btn:hover {
+            background: #DAA520;
+            transform: rotate(360deg) scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 20px;
+            background: #1a1a1a;
+            color: #888;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .signup-form {
+                flex-direction: column;
+            }
+
+            .signup-form button {
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 2rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="bull-moose-badge" onclick="playMooseSound()">🦌</div>
+        <h1>Theodore Roosevelt</h1>
+        <p class="subtitle">The Bull Moose Returns</p>
+        <p class="tagline">"Speak softly, carry a big stick, and take bold action for the American people."</p>
+        <div class="cta-buttons">
+            <a href="#square-deal" class="btn btn-primary">Join the Progressive Party</a>
+            <a href="#why" class="btn btn-secondary">Read the Platform</a>
+        </div>
+    </section>
+
+    <!-- Why TR Section -->
+    <section class="why-tr fade-in" id="why">
+        <h2>Why TR for 2025?</h2>
+        <p class="intro">
+            In 1912, Theodore Roosevelt ran on the most progressive platform America had ever seen.
+            Today, his vision is more relevant than ever. From trust-busting to conservation,
+            from workers' rights to honest government—TR's Square Deal is the blueprint we need.
+        </p>
+        <div class="platform-grid">
+            <div class="platform-item">
+                <h3>Trust-Busting Then</h3>
+                <p>Breaking up Standard Oil and railroad monopolies</p>
+                <div class="platform-arrow">↓</div>
+                <h3>Trust-Busting Now</h3>
+                <p>Breaking up Big Tech monopolies and protecting competition</p>
+            </div>
+            <div class="platform-item">
+                <h3>Conservation Then</h3>
+                <p>230 million acres of public lands protected</p>
+                <div class="platform-arrow">↓</div>
+                <h3>Conservation Now</h3>
+                <p>Aggressive climate action and expansion of national parks</p>
+            </div>
+            <div class="platform-item">
+                <h3>Workers' Rights Then</h3>
+                <p>8-hour workday, safe conditions, fair wages</p>
+                <div class="platform-arrow">↓</div>
+                <h3>Workers' Rights Now</h3>
+                <p>Living wage, healthcare, and dignity in the workplace</p>
+            </div>
+            <div class="platform-item">
+                <h3>Progressive Reform Then</h3>
+                <p>Direct election of senators, women's suffrage</p>
+                <div class="platform-arrow">↓</div>
+                <h3>Progressive Reform Now</h3>
+                <p>Campaign finance reform and voting rights protection</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Square Deal Section -->
+    <section class="square-deal fade-in" id="square-deal">
+        <h2>The Modern Square Deal</h2>
+        <div class="pillars">
+            <div class="pillar-card">
+                <span class="pillar-icon">🌲</span>
+                <h3>Conservation for Tomorrow</h3>
+                <p>
+                    Triple our national parks. Achieve net-zero emissions by 2040. Invest $2 trillion
+                    in renewable energy. Protect our wilderness for the next seven generations.
+                    The land belongs to the people—not corporations.
+                </p>
+            </div>
+            <div class="pillar-card">
+                <span class="pillar-icon">⚖️</span>
+                <h3>Economic Justice</h3>
+                <p>
+                    Break up monopolies that crush competition. Fair wages for fair work.
+                    Support small businesses against corporate giants. No one who works full-time
+                    should live in poverty. A Square Deal means economic opportunity for all.
+                </p>
+            </div>
+            <div class="pillar-card">
+                <span class="pillar-icon">🗳️</span>
+                <h3>Democratic Reform</h3>
+                <p>
+                    Get money out of politics. Protect voting rights in every state.
+                    End gerrymandering. The government belongs to the people—not special interests.
+                    Direct democracy, direct accountability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bully Section -->
+    <section class="bully-section fade-in">
+        <h2>Still Bully!</h2>
+        <div class="quote-box">
+            "It is not the critic who counts; not the man who points out how the strong man stumbles...
+            The credit belongs to the man who is actually in the arena, whose face is marred by dust
+            and sweat and blood; who strives valiantly; who errs, who comes short again and again...
+            who at the best knows in the end the triumph of high achievement."
+        </div>
+        <p style="font-size: 1.2rem; margin-bottom: 60px;">
+            TR's legacy of conservation, trust-busting, and progressive reform built modern America.
+            Now it's time to finish what he started.
+        </p>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">230M</span>
+                <span class="stat-label">Acres Protected</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">5</span>
+                <span class="stat-label">National Parks Created</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">44</span>
+                <span class="stat-label">Trusts Dissolved</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">American Grit</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta fade-in">
+        <h2>Join the Progressive Movement</h2>
+        <p>
+            The Bull Moose Party is back. This time, we're going to win.
+            Sign up to volunteer, donate, and help us bring the Square Deal to the 21st century.
+        </p>
+        <form class="signup-form" onsubmit="handleSubmit(event)">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Join Now</button>
+        </form>
+        <div class="cta-buttons">
+            <a href="#" class="btn btn-primary">Volunteer</a>
+            <a href="#" class="btn btn-secondary">Donate</a>
+        </div>
+        <div class="social-links">
+            <div class="social-btn">📘</div>
+            <div class="social-btn">🐦</div>
+            <div class="social-btn">📸</div>
+            <div class="social-btn">🎥</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Progressive Bull Moose Party. All Rights Reserved.</p>
+        <p class="disclaimer">
+            This website is a historical recreation created for educational purposes as part of a government class
+            project.
+            Theodore Roosevelt (1858-1919) is not actually running for office in 2025.
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Moose sound easter egg
+        function playMooseSound() {
+            const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2ur7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N3e3+Dh4uPk5ebn6Onq6+zt7u/w8fLz9PX29/j5+vv8/f7/AQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMkJSYnKCkqKywtLi8wMTIzNDU2Nzg5Ojs8PT4/QEFCQ0RFRkdISUpLTE1OT1BRUlNUVVZXWFlaW1xdXl9gYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXp7fH1+f4CBgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2ur7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N3e3+Dh4uPk5ebn6Onq6+zt7u/w8fLz9PX29/j5+vv8/f7/');
+            audio.play().catch(() => {
+                // Silent fail if audio doesn't play
+            });
+            alert('BULLY! The Bull Moose roars! 🦌');
+        }
+
+        // Form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for joining the Progressive movement! TR would be proud. 🎩');
+            e.target.reset();
+        }
+
+        // Animate stats when visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        const text = stat.textContent;
+                        if (text.includes('M')) {
+                            animateNumber(stat, 0, 230, 2000, 'M');
+                        } else if (text === '100%') {
+                            animateNumber(stat, 0, 100, 2000, '%');
+                        } else {
+                            const target = parseInt(text);
+                            animateNumber(stat, 0, target, 2000);
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-grid');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        function animateNumber(element, start, end, duration, suffix = '') {
+            const range = end - start;
+            const increment = range / (duration / 16);
+            let current = start;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= end) {
+                    current = end;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current) + suffix;
+            }, 16);
+        }
+    </script>
+</body>
+
+</html>
