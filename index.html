@@ -38,6 +38,10 @@
             flex-wrap: wrap;
         }
 
+        nav li {
+            position: relative;
+        }
+
         nav a {
             color: #f4f1e8;
             text-decoration: none;
@@ -52,11 +56,49 @@
             color: #DAA520;
         }
 
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(20, 40, 20, 0.98);
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 5px;
+            margin-top: 10px;
+            padding: 10px 0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 20px;
+            text-align: center;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(218, 165, 32, 0.2);
+        }
+
+        .dropdown > a::after {
+            content: ' ▼';
+            font-size: 0.7rem;
+        }
+
         /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(20, 40, 20, 0.7), rgba(40, 20, 10, 0.8)),
-                url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Theodore_Roosevelt_by_the_Pach_Bros.jpg/1006px-Theodore_Roosevelt_by_the_Pach_Bros.jpg') center/cover;
+                url('https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=1600') center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -716,11 +758,15 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li class="dropdown">
+                <a href="#" onclick="showPage('home')">Home</a>
+                <div class="dropdown-content">
+                    <a href="#why">Platform</a>
+                    <a href="#square-deal">Square Deal</a>
+                    <a href="#join">Join Us</a>
+                </div>
+            </li>
             <li><a href="#" onclick="showPage('bio')">About TR</a></li>
-            <li><a href="#why">Platform</a></li>
-            <li><a href="#square-deal">Square Deal</a></li>
-            <li><a href="#join">Join Us</a></li>
         </ul>
     </nav>
 
@@ -893,7 +939,7 @@
 
             <div class="bio-grid">
                 <div class="bio-image-section">
-                    <img src="https://images.unsplash.com/photo-1611915387288-fd8d2f5f928b?w=500"
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Theodore_Roosevelt_by_the_Pach_Bros.jpg/1006px-Theodore_Roosevelt_by_the_Pach_Bros.jpg"
                         alt="Theodore Roosevelt Portrait" class="bio-main-image">
                     <div class="quick-facts">
                         <h3>Quick Facts</h3>
@@ -1168,4 +1214,3 @@
 </body>
 
 </html>
-
